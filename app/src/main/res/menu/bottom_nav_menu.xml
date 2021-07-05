@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/favoriteFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_foreground"
+        android:title="@string/favorite_fragment"/>
+
+    <item
+        android:id="@+id/recipeFragment"
+        android:enabled="true"
+        android:icon="@mipmap/ic_recipe_foreground"
+        android:title="@string/recipe_fragment"/>
+
+    <item
+        android:id="@+id/cartFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_cart_foreground"
+        android:title="@string/cart_fragment"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_foreground"
+        android:title="@string/settings_fragment"/>
+
+</menu>
