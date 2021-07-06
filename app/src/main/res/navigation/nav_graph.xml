@@ -9,7 +9,11 @@
         android:id="@+id/recipeFragment"
         android:name="com.example.easychef.RecipeFragment"
         android:label="fragment_recipe"
-        tools:layout="@layout/fragment_recipe" />
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipeFragment_to_recipeViewFragment"
+            app:destination="@id/recipeViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.easychef.FavoriteFragment"
@@ -25,4 +29,9 @@
         android:name="com.example.easychef.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/recipeViewFragment"
+        android:name="com.example.easychef.RecipeViewFragment"
+        android:label="fragment_recipe_view"
+        tools:layout="@layout/fragment_recipe_view" />
 </navigation>

@@ -6,4 +6,5 @@
     <string name="favorite_fragment">Favorite</string>
     <string name="settings_fragment">Settings</string>
     <string name="cart_fragment">Cart</string>
+    <string name="recipe_view">Recipe View</string>
 </resources>
