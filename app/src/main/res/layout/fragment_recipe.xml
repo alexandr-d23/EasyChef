@@ -43,10 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="176dp"
+        android:background="#F39C94"
         android:clickable="true"
         android:focusable="true"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#9A9393"
+        app:backgroundTint="#F39C94"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

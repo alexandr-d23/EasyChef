@@ -8,6 +8,20 @@
     tools:context=".CartFragment">
 
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="#98D7D0"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/dish_name_fragment"
+        android:textColor="#745C4C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
@@ -29,15 +43,17 @@
         android:layout_marginTop="100dp"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <EditText
-        android:id="@+id/instruction"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="324dp"
         android:layout_marginTop="350dp"
-        android:background="#F1FFFD"
-        android:gravity="center"
-        android:hint="@string/add_instruction"
-        android:textColor="#745C4C" />
+        android:background="#F1FFFD" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="153dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="120dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,33 +65,4 @@
         android:textColor="#745C4C"
         android:textSize="16sp"
         android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/textView2"
-        android:layout_width="306dp"
-        android:layout_height="36dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:background="#98D7D0"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:hint="@string/dish_name_fragment"
-        android:textColor="#745C4C"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/ingr"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="125dp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:hint="@string/add_ingredients"
-        android:textColor="#745C4C"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
 </FrameLayout>
