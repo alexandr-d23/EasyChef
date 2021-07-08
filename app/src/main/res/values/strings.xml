@@ -8,4 +8,9 @@
     <string name="cart_fragment">Cart</string>
     <string name="recipe_view">Recipe View</string>
     <string name="add_recipe">Add recipe</string>
+    <string name="dish_name_fragment">Dish name</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="add_instruction">Add instruction</string>
+    <string name="recipes">Recipes</string>
 </resources>
