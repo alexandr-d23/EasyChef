@@ -12,12 +12,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RecipeFragment : Fragment() {
     private var fabBtn: FloatingActionButton? = null
+    private var recipeButton: Button?=null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         fabBtn = view.findViewById(R.id.floatingActionButton)
         fabBtn?.setOnClickListener {
             findNavController().navigate(R.id.action_recipeFragment_to_addRecipeFragment)
         }
+        recipeButton = view.findViewById(R.id.button1)
+        recipeButton?.setOnClickListener {
+            findNavController().navigate(R.id.action_recipeFragment_to_recipeViewFragment) }
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -28,4 +32,5 @@ class RecipeFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_recipe, container, false)
     }
+
 }
