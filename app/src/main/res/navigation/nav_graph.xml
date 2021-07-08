@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_recipeFragment_to_addRecipeFragment"
             app:destination="@id/addRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeFragment_to_recipePageFragment"
+            app:destination="@id/recipePageFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -34,4 +37,9 @@
         android:name="com.example.easychef.AddRecipeFragment"
         android:label="fragment_add_recipe"
         tools:layout="@layout/fragment_add_recipe" />
+    <fragment
+        android:id="@+id/recipePageFragment"
+        android:name="com.example.easychef.RecipePage"
+        android:label="fragment_activity_recipe_page"
+        tools:layout="@layout/fragment_activity_recipe_page"/>
 </navigation>
