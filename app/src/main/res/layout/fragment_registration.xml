@@ -7,6 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:background="@color/LightMint">
 
     <androidx.appcompat.widget.Toolbar
@@ -50,14 +51,14 @@
             android:layout_margin="20dp">
 
             <LinearLayout
-                android:layout_width="377dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/LightMint"
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/layout_userName"
-                    android:layout_width="match_parent"
+                    android:layout_width="349dp"
                     android:layout_height="wrap_content"
                     android:background="@color/LightMint"
                     android:fontFamily="sans-serif-black"
@@ -66,7 +67,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/reg_userName"
-                        android:layout_width="match_parent"
+                        android:layout_width="349dp"
                         android:layout_height="match_parent"
                         android:backgroundTint="@color/white"
                         android:fontFamily="sans-serif-black"
@@ -139,7 +140,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/reg_passwordAgain"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/again_pass"
@@ -155,7 +156,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/Register"
+        android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -166,4 +167,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relative_layout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
