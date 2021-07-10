@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFBFBA"
+    android:background="@color/LightRose"
     tools:context=".CartFragment">
 
 
@@ -14,11 +14,11 @@
         android:layout_height="36dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:background="#98D7D0"
+        android:background="@color/LightMint"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/dish_name_fragment"
-        android:textColor="#745C4C"
+        android:textColor="@color/Brown"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -29,7 +29,7 @@
         android:layout_gravity="bottom"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="#98D7D0"
+        android:background="@color/LightMint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="324dp"
         android:layout_marginTop="350dp"
-        android:background="#F1FFFD" />
+        android:background="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="153dp"
@@ -62,7 +62,7 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="100dp"
         android:text="@string/ingredients"
-        android:textColor="#745C4C"
+        android:textColor="@color/Brown"
         android:textSize="16sp"
         android:textStyle="bold" />
 </FrameLayout>

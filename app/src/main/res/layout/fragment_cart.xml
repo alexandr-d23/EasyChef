@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".CartFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#EFBFBA">
+    android:background="@color/LightRose">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,11 +13,11 @@
         android:layout_height="36dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:background="#98D7D0"
+        android:background="@color/LightMint"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/cart_fragment"
-        android:textColor="#745C4C"
+        android:textColor="@color/Brown"
         android:textSize="20sp"
         android:textStyle="bold" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,7 +27,7 @@
         android:layout_gravity="bottom"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="#98D7D0"
+        android:background="@color/LightMint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
