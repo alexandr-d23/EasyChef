@@ -13,4 +13,15 @@
     <string name="add_ingredients">Add ingredients</string>
     <string name="add_instruction">Add instruction</string>
     <string name="recipes">Recipes</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="login">Login now</string>
+    <string name="remember">Dont remember password?</string>
+    <string name="new_account">Dont have an account?</string>
+    <string name="reg">Register</string>
+    <string name="user_name">User name</string>
+    <string name="user">CyborgKiller</string>
+    <string name="user_email">cyborg@gmail.com</string>
+    <string name="pass">12345678</string>
+    <string name="again_pass">Password again</string>
 </resources>
