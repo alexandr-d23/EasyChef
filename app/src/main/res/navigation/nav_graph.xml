@@ -63,5 +63,4 @@
         android:name="com.example.easychef.RecipePage"
         android:label="fragment_activity_recipe_page"
         tools:layout="@layout/fragment_activity_recipe_page"/>
-</fragment>
 </navigation>
