@@ -8,6 +8,20 @@
     tools:context=".CartFragment">
 
 
+    <EditText
+        android:id="@+id/imageUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="270dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:hint="@string/add_image_url"
+        android:textColor="@color/Brown"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
@@ -77,5 +91,14 @@
         android:textColor="@color/Brown"
         android:textSize="16sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonAddUrl"
+        android:layout_width="72dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="320dp"
+        android:text="Add "
+        android:textSize="8sp" />
 
 </FrameLayout>
