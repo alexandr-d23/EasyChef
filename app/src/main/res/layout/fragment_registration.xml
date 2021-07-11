@@ -72,7 +72,6 @@
                         android:backgroundTint="@color/white"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/user_name"
-                        android:text="@string/user"
                         android:textColor="#745C4C"
                         android:textSize="16sp" />
 
@@ -95,7 +94,6 @@
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/email"
 
-                        android:text="@string/user_email"
                         android:textColor="#745C4C"
                         android:textSize="16sp" />
 
@@ -109,7 +107,9 @@
                     android:background="@color/white"
                     android:fontFamily="sans-serif-black"
                     android:textColor="#745C4C"
-                    android:textColorHint="#745C4C">
+                    android:textColorHint="#745C4C"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/reg_password"
@@ -119,7 +119,6 @@
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:text="@string/pass"
                         android:textColor="#745C4C"
                         android:textSize="16sp" />
 
@@ -146,7 +145,6 @@
                         android:hint="@string/again_pass"
                         android:inputType="textPassword"
                         android:singleLine="true"
-                        android:text="@string/pass"
                         android:textColor="#745C4C"
                         android:textSize="16sp" />
 
