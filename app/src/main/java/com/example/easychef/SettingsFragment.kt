@@ -8,10 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.navigation.fragment.findNavController
 
 class SettingsFragment : Fragment() {
+
+    private var logOutBtn: Button? = null
+
     private lateinit var switchThemeButton: Button
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        logOutBtn = view.findViewById(R.id.LogOutButton)
+        logOutBtn?.setOnClickListener {
+            findNavController().navigate(R.id.action_settingsFragment_to_authorizationFragment)
+        }
         super.onViewCreated(view, savedInstanceState)
 
         switchThemeButton = view.findViewById(R.id.switch_theme_button)

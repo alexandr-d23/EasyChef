@@ -24,5 +24,7 @@
     <string name="user_email">cyborg@gmail.com</string>
     <string name="pass">12345678</string>
     <string name="again_pass">Password again</string>
+    <string name="log_out">Log out</string>
     <string name="add_image_url">Add image url</string>
+
 </resources>
