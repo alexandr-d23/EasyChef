@@ -1,38 +1,34 @@
 package com.example.easychef
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.easychef.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var controller: NavController
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         controller = findNavController(R.id.nav_host_fragment)
-
-        val bnvMain = findViewById<BottomNavigationView>(R.id.nav_view)
-        bnvMain.setupWithNavController(controller)
+        binding.navView.setupWithNavController(controller)
         visibilityNavElements(controller)
 
-
     }
-
     private fun visibilityNavElements(navController: NavController) {
-        val bnvMain = findViewById<BottomNavigationView>(R.id.nav_view)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.authorizationFragment,
-                R.id.registrationFragment -> bnvMain?.visibility = View.GONE
-                else -> bnvMain?.visibility = View.VISIBLE
+                R.id.registrationFragment ->  binding.navView.visibility = View.GONE
+                else ->  binding.navView.visibility = View.VISIBLE
             }
         }
     }
