@@ -17,11 +17,7 @@
             android:id="@+id/action_recipeFragment_to_recipePageFragment"
             app:destination="@id/recipePageFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="com.example.easychef.FavoriteFragment"
-        android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.easychef.SettingsFragment"
