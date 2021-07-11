@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="LightRose">#FFBB86FC</color>
-    <color name="LightMint">#FF3700B3</color>
-    <color name="Brown">#FFFEFE</color>
-    <color name="Rose">#FF6200EE</color>
-    <color name="Mint">#FF018786</color>
+    <color name="black">#371818</color>
+    <color name="white">#D68678</color>
+    <color name="LightRose">#6C4D41</color>
+    <color name="LightMint">#4A2422</color>
+    <color name="Brown">#68C1B9</color>
+    <color name="Rose">#834C48</color>
+    <color name="Mint">#064A4A</color>
 </resources>
