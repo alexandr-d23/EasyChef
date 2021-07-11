@@ -1,68 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/LightRose"
+    android:padding="16dp"
     tools:context=".CartFragment">
-
-
-    <EditText
-        android:id="@+id/imageUrl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="270dp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="left"
-        android:hint="@string/add_image_url"
-        android:textColor="@color/Brown"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="@color/LightMint"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="156dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="100dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
-        android:id="@+id/instruction"
-        android:layout_width="match_parent"
-        android:layout_height="324dp"
-        android:layout_marginTop="350dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:hint="@string/add_instruction"
-        android:textColor="@color/Brown" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/ingredients"
-        android:textColor="@color/Brown"
-        android:textSize="16sp"
-        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textView2"
@@ -76,29 +20,94 @@
         android:hint="@string/dish_name_fragment"
         android:textColor="@color/Brown"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:layout_editor_absoluteY="16dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/imageUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
+        android:hint="@string/add_image_url"
+        android:textColor="@color/Brown"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+
+    <Button
+        android:id="@+id/buttonAddUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add "
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageUrl" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ingredients"
+        android:textColor="@color/Brown"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddUrl" />
 
     <EditText
         android:id="@+id/ingr"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="125dp"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/add_ingredients"
+        android:minWidth="200dp"
+        android:minHeight="100dp"
+
         android:textColor="@color/Brown"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        />
 
-    <Button
-        android:id="@+id/buttonAddUrl"
-        android:layout_width="72dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="320dp"
-        android:text="Add "
-        android:textSize="8sp" />
-
-</FrameLayout>
+    <EditText
+        android:id="@+id/instruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="@string/add_instruction"
+        android:minHeight="100dp"
+        android:textColor="@color/Brown"
+        app:layout_constraintTop_toBottomOf="@id/ingr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

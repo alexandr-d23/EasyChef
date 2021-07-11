@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.easychef.data.Recipe
+import com.example.easychef.data.RecipeRepository
 import com.example.easychef.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -21,6 +23,17 @@ class MainActivity : AppCompatActivity() {
         controller = findNavController(R.id.nav_host_fragment)
         binding.navView.setupWithNavController(controller)
         visibilityNavElements(controller)
+        val rep = RecipeRepository(this //внутри фрагмента requireContext
+        )
+        rep.addRecipe(
+            Recipe(
+                1,
+                "Первый рецепт",
+                "url.ru",
+                "1 2 3",
+                "Готовь"
+            )
+        )
 
     }
     private fun visibilityNavElements(navController: NavController) {
