@@ -34,7 +34,8 @@ class authorizationFragment : Fragment() {
             findNavController().navigate(R.id.action_authorizationFragment_to_registrationFragment)
         }
         binding.LoginButton.setOnClickListener {
-            checkUserInfo()
+            if(checkUserInfo())
+                findNavController().navigate(R.id.action_authorizationFragment_to_recipeFragment)
         }
         super.onViewCreated(view, savedInstanceState)
     }
@@ -53,17 +54,18 @@ class authorizationFragment : Fragment() {
        binding.LoginButton.isEnabled = emailExist && passwordExist
     }
 
-    private fun checkUserInfo(){
+    private fun checkUserInfo(): Boolean{
         val sharedPref:UserInfoSharedPref=UserInfoSharedPref(requireContext())
-        val userInfo = sharedPref.getValue(binding.logEmail.toString())?.toList()
+        val userInfo = sharedPref.getValue(binding.logEmail.text.toString())?.toList()
         if(userInfo==null ){
             Toast.makeText(context,"Such user was not found",Toast.LENGTH_SHORT).show()
          }
-        else if(userInfo[1]!=binding.logPassword.toString())
+        else if(userInfo[1]!=binding.logPassword.text.toString())
             Toast.makeText(context,"Wrong password",Toast.LENGTH_SHORT).show()
         else{
             Toast.makeText(context,"Welcome ${userInfo[0]}",Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_authorizationFragment_to_recipeFragment)
+            return true
         }
+        return false
     }
 }

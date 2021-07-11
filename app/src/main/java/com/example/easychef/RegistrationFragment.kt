@@ -62,7 +62,7 @@ class RegistrationFragment : Fragment() {
 
     private fun rememberUser(){
         val sharedPref:UserInfoSharedPref=UserInfoSharedPref(requireContext())
-        val nameAndPass = hashSetOf(binding.regUserName.toString(),binding.regPassword.toString())
-        sharedPref.save(binding.regMail.toString(), nameAndPass)
+        val nameAndPass = hashSetOf(binding.regUserName.text.toString(),binding.regPassword.text.toString())
+        sharedPref.save(binding.regMail.text.toString(), nameAndPass)
     }
 }
