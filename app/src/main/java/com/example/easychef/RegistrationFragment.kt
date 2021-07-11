@@ -1,16 +1,13 @@
 package com.example.easychef
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.easychef.databinding.FragmentAuthorizationBinding
 import com.example.easychef.databinding.FragmentRegistrationBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
@@ -39,6 +36,7 @@ class RegistrationFragment : Fragment() {
             enableRegisterButton()
         }
         binding.registerBtn.setOnClickListener {
+            rememberUser()
             findNavController().navigate(R.id.action_registrationFragment_to_recipeFragment)
         }
         super.onViewCreated(view, savedInstanceState)
@@ -60,5 +58,11 @@ class RegistrationFragment : Fragment() {
 
     private fun checkPassRepeat(){
         repeatPassCorrect = binding.regPassword.text.toString()==binding.regPasswordAgain.text.toString()
+    }
+
+    private fun rememberUser(){
+        val sharedPref:UserInfoSharedPref=UserInfoSharedPref(requireContext())
+        val nameAndPass = hashSetOf(binding.regUserName.toString(),binding.regPassword.toString())
+        sharedPref.save(binding.regMail.toString(), nameAndPass)
     }
 }

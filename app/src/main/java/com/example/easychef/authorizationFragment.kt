@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -33,7 +34,7 @@ class authorizationFragment : Fragment() {
             findNavController().navigate(R.id.action_authorizationFragment_to_registrationFragment)
         }
         binding.LoginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_authorizationFragment_to_recipeFragment)
+            checkUserInfo()
         }
         super.onViewCreated(view, savedInstanceState)
     }
@@ -50,5 +51,19 @@ class authorizationFragment : Fragment() {
 
    private fun enableLoginButton() {
        binding.LoginButton.isEnabled = emailExist && passwordExist
+    }
+
+    private fun checkUserInfo(){
+        val sharedPref:UserInfoSharedPref=UserInfoSharedPref(requireContext())
+        val userInfo = sharedPref.getValue(binding.logEmail.toString())?.toList()
+        if(userInfo==null ){
+            Toast.makeText(context,"Such user was not found",Toast.LENGTH_SHORT).show()
+         }
+        else if(userInfo[1]!=binding.logPassword.toString())
+            Toast.makeText(context,"Wrong password",Toast.LENGTH_SHORT).show()
+        else{
+            Toast.makeText(context,"Welcome ${userInfo[0]}",Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_authorizationFragment_to_recipeFragment)
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.easychef
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         controller = findNavController(R.id.nav_host_fragment)
         binding.navView.setupWithNavController(controller)
         visibilityNavElements(controller)
+
     }
     private fun visibilityNavElements(navController: NavController) {
         navController.addOnDestinationChangedListener { _, destination, _ ->
