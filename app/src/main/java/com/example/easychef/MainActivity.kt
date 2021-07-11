@@ -23,17 +23,6 @@ class MainActivity : AppCompatActivity() {
         controller = findNavController(R.id.nav_host_fragment)
         binding.navView.setupWithNavController(controller)
         visibilityNavElements(controller)
-        val rep = RecipeRepository(this //внутри фрагмента requireContext
-        )
-        rep.addRecipe(
-            Recipe(
-                1,
-                "Первый рецепт",
-                "url.ru",
-                "1 2 3",
-                "Готовь"
-            )
-        )
 
     }
     private fun visibilityNavElements(navController: NavController) {
