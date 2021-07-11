@@ -2,7 +2,9 @@ package com.example.easychef
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -20,7 +22,10 @@ class MainActivity : AppCompatActivity() {
         val bnvMain = findViewById<BottomNavigationView>(R.id.nav_view)
         bnvMain.setupWithNavController(controller)
         visibilityNavElements(controller)
+
+
     }
+
     private fun visibilityNavElements(navController: NavController) {
         val bnvMain = findViewById<BottomNavigationView>(R.id.nav_view)
         navController.addOnDestinationChangedListener { _, destination, _ ->
