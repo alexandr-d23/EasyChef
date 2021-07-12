@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/LightRose"
+    android:padding="16dp"
     tools:context=".CartFragment">
-
 
     <TextView
         android:id="@+id/textView2"
@@ -17,39 +17,118 @@
         android:background="@color/LightMint"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="@string/dish_name_fragment"
+        android:text="Dish Name"
         android:textColor="@color/Brown"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="156dp"
         android:layout_height="156dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:layout_editor_absoluteY="16dp"
         tools:srcCompat="@tools:sample/avatars" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="324dp"
-        android:layout_marginTop="350dp"
-        android:background="@color/white" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="153dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="120dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
         android:text="@string/ingredients"
         android:textColor="@color/Brown"
         android:textSize="16sp"
-        android:textStyle="bold" />
-</FrameLayout>
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="153dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <ScrollView
+        android:id="@+id/instruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="@string/add_instruction"
+        android:minHeight="150dp"
+        android:textColor="@color/Brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/LightRose"
+        tools:context=".CartFragment">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="306dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@color/LightMint"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/dish_name_fragment"
+            android:textColor="@color/Brown"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="156dp"
+            android:layout_height="156dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="100dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:layout_marginTop="350dp"
+            android:background="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="153dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="120dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/ingredients"
+            android:textColor="@color/Brown"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+-->

@@ -9,12 +9,12 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-
 class RecipeFragment : Fragment() {
     private var fabBtn: FloatingActionButton? = null
     private var recipeButton: Button? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         fabBtn = view.findViewById(R.id.floatingActionButton)
         fabBtn?.setOnClickListener {
             findNavController().navigate(R.id.action_recipeFragment_to_addRecipeFragment)
@@ -24,7 +24,6 @@ class RecipeFragment : Fragment() {
         recipeButton?.setOnClickListener {
             findNavController().navigate(R.id.action_recipeFragment_to_recipePageFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onCreateView(
