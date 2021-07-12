@@ -11,13 +11,13 @@ import androidx.navigation.fragment.findNavController
 import com.example.easychef.data.Recipe
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-
 class RecipeFragment : Fragment() {
     private var fabBtn: FloatingActionButton? = null
     private var recipeButton2: ImageButton? = null
     private var recipeButton3: ImageButton? = null
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         fabBtn = view.findViewById(R.id.floatingActionButton)
         fabBtn?.setOnClickListener {
             findNavController().navigate(R.id.action_recipeFragment_to_addRecipeFragment)
@@ -31,6 +31,7 @@ class RecipeFragment : Fragment() {
         recipeButton3?.setOnClickListener {
             findNavController().navigate(R.id.action_recipeFragment_to_recipePageFragment)
         }
+        
         super.onViewCreated(view, savedInstanceState)
         val recipes = listOf(
             Recipe(
@@ -234,7 +235,6 @@ class RecipeFragment : Fragment() {
                         "Выдавить сок из пяти лимонов — должно получиться около стакана сока.\n" +
                         "В кувшин влить лимонный сок и сахарный сироп. Добавить газированную воду и кубики льда, чтобы сильнее охладить лимонад. Если лимонад слишком сладкий, добавить еще воды.\n")
         )
-
     }
 
     override fun onCreateView(
